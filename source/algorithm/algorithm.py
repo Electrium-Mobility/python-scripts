@@ -1,4 +1,6 @@
 import networkx as nx
+from ..exceptions import InvalidData
+from functional_methods.calc_default_num import calc_default_num
 
 
 class RankingAlgorithm:
@@ -8,12 +10,22 @@ class RankingAlgorithm:
     2. Max people for each project
     3. Min people for each project
     '''
-    def __init__(self, prefs, capacities, demands, graph, projects):
+    def __init__(self, prefs, capacities, graph, projects, demands = None):
         self.prefs = prefs  
-        self.capacities = capacities  
-        self.demands = demands  
+        self.capacities = capacities 
         self.graph = graph
         self.projects = projects
+        self.validate_data()
+        default_demands = {project: calc_default_num(prefs, projects) for project in projects}
+        if demands == None:
+            self.demands = default_demands #set a default demands
+        else:
+            self.demands = demands
+
+
+    def validate_data(self):
+        if self.prefs is None or self.capacities is None or self.graph is None or self.projects is None:
+            raise(InvalidData)
 
     def execute(self):
         G = self.graph
