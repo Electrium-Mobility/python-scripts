@@ -1,6 +1,6 @@
 import networkx as nx
-from ..exceptions import InvalidData
-from functional_methods.calc_default_num import calc_default_num
+from src.exceptions import InvalidData
+from src.functional_methods.calc_default_num import calc_default_num
 
 
 class RankingAlgorithm:
@@ -15,7 +15,6 @@ class RankingAlgorithm:
         self.capacities = capacities 
         self.graph = graph
         self.projects = projects
-        self.validate_data()
         default_demands = {project: calc_default_num(prefs, projects) for project in projects}
         if demands == None:
             self.demands = default_demands #set a default demands
@@ -24,7 +23,7 @@ class RankingAlgorithm:
 
 
     def validate_data(self):
-        if self.prefs is None or self.capacities is None or self.graph is None or self.projects is None:
+        if self.prefs == None or self.capacities == None or self.graph == None or self.projects == None:
             raise(InvalidData)
 
     def execute(self):

@@ -1,4 +1,4 @@
-from source.exceptions import InvalidData
+from src.exceptions import InvalidData
 
 
 def calc_default_num (prefs, projects):
