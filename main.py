@@ -2,6 +2,7 @@ from src.algorithm.algorithm import RankingAlgorithm
 import networkx as nx
 from src.exceptions import InvalidData
 from src.pandasinterfaces.csv_to_json_interface import csv_to_json
+from src.pandasinterfaces.output_csv import output_csv
 
 
 #1. List of Projects
@@ -32,5 +33,8 @@ try:
     test.validate_data()
 except InvalidData as e:
     print(f"Caught an exception: {e}")
+    
 test.execute()
 test.print_results()
+projList = test.return_results_as_List()
+output_csv(projList)

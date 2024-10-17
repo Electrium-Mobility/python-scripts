@@ -49,3 +49,12 @@ class RankingAlgorithm:
             for project, flow in flowDict[person].items():
                 if flow:
                     print (person,'joins',project)
+                    
+    def return_results_as_List(self):
+        flowDict = nx.min_cost_flow(self.graph)
+        returnList = []
+        for person in self.prefs:
+            for project, flow in flowDict[person].items():
+                if flow:
+                    returnList.append(project)
+        return returnList
