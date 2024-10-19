@@ -1,4 +1,5 @@
-# python-scripts
+# Networkx Min Cost Algorithm
 
-This is a project assignment algorithm that will be run after applicants submitted their applications on our main website. <br/>
-Please create your own branch before merging it into main as we want to keep our main branch production ready!
+This project-assignment algorithm receives a csv file and output a processed csv file<br/>
+
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)
