@@ -5,8 +5,6 @@ This project-assignment algorithm receives a csv file and output a processed csv
 
 ## Tech Stack
 
-This project utilizes a variety of technologies to ensure robust and efficient functionality:
-
 ### Backend
 
 ![Pytest](https://img.shields.io/badge/tested%20with-pytest-green.svg)
