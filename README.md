@@ -1,4 +1,16 @@
-# python-scripts
+# Networkx Min Cost Algorithm
+_ONLY SUPPORTS PYTHON 3.10 AND ABOVE_<br/>
+This project-assignment algorithm receives a csv file and output a processed csv file<br/>
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg) 
 
-This is a project assignment algorithm that will be run after applicants submitted their applications on our main website <br />
-Please create your own branch before merging it into main as we want to keep our main branch production ready!
+## Tech Stack
+
+### Backend
+
+![Pytest](https://img.shields.io/badge/tested%20with-pytest-green.svg)
+![Pandas](https://img.shields.io/badge/using-pandas-blue.svg)
+![NetworkX](https://img.shields.io/badge/using-NetworkX-brightgreen.svg)
+
+### Frontend
+
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-blue.svg) 
